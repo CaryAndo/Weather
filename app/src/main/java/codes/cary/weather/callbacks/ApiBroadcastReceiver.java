@@ -7,7 +7,7 @@ import android.content.Intent;
 import codes.cary.weather.service.WeatherApiService;
 
 /**
- * Created by cary on 3/4/17.
+ * A {@link BroadcastReceiver} to receive messages from the {@link WeatherApiService}
  */
 
 public class ApiBroadcastReceiver extends BroadcastReceiver {

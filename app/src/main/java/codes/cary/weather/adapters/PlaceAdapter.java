@@ -16,12 +16,12 @@ import codes.cary.weather.fragments.PlaceListFragment;
 import codes.cary.weather.model.Place;
 
 /**
- * Created by cary on 3/3/17.
+ * A RecyclerView adapter to manage {@link Place}'s
  */
 
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> {
     private List<Place> mItems;
-    private Set<Place> mUpdatingSet; // Set of items that are curretly updating
+    private Set<Place> mUpdatingSet; // Set of items that are currently updating
     private PlaceListFragment.PlaceListFragmentCallbacks mListener;
 
     public PlaceAdapter(List<Place> places, PlaceListFragment.PlaceListFragmentCallbacks callbacks) {
@@ -57,9 +57,13 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
         }
 
         holder.mNameTextView.setText(mItems.get(position).getZipCode());
-        holder.mWeatherTextView.setText(mItems.get(position).getWeather()); // TODO: parse this
+        holder.mWeatherTextView.setText(mItems.get(position).getWeather());
     }
 
+    /**
+     * Set the spinner bar on an item that is currently refreshing
+     * @param place
+     */
     public void setItemUpdating(Place place) {
         int index = mItems.indexOf(place);
 
@@ -70,6 +74,10 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> 
         }
     }
 
+    /**
+     * Remove spinner from item that has finished updating
+     * @param place
+     */
     public void itemFinishedUpdating(Place place) {
         mUpdatingSet.remove(place);
     }

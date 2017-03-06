@@ -1,7 +1,7 @@
 package codes.cary.weather.callbacks;
 
 /**
- * Created by cary on 3/5/17.
+ * Some simple functionality that we can make sure all Activities have
  */
 
 public interface ContainerInteractionCallbacks {

@@ -15,7 +15,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
- * Created by cary on 3/3/17.
+ * Some utility methods for storing/retrieving things to/from the disk
  */
 
 public class StorageUtils {

@@ -5,14 +5,15 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 import codes.cary.weather.R;
-import codes.cary.weather.callbacks.ContainerInteractionCallbacks;
 import codes.cary.weather.fragments.PlaceDetailFragment;
 import codes.cary.weather.fragments.PlaceListFragment;
 import codes.cary.weather.model.Place;
 
 
+/**
+ * Entry point for the app
+ */
 public class MainActivity extends BaseActivity implements
-        ContainerInteractionCallbacks,
         PlaceListFragment.PlaceListFragmentCallbacks,
         PlaceDetailFragment.DetailFragmentCallbacks {
 
@@ -41,11 +42,6 @@ public class MainActivity extends BaseActivity implements
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                 .replace(R.id.main_activity_container, PlaceDetailFragment.newInstance(place))
                 .commit();
-    }
-
-    @Override
-    public void showErrorDialog(String message) {
-        super.showErrorDialog(message);
     }
 
     @Override

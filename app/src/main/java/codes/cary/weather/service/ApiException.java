@@ -1,7 +1,7 @@
 package codes.cary.weather.service;
 
 /**
- * Created by cary on 3/3/17.
+ * TODO: throw this when needed
  */
 
 public class ApiException extends Exception {

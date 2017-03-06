@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 
 import java.io.IOException;
 
@@ -90,6 +91,10 @@ public class WeatherApiService extends IntentService {
     protected void broadcast(String action,
                              @Nullable String message,
                              @Nullable String jsonResponse) {
+        Log.d(getTag(), "###### Broadcasting result " +
+                action +
+                " for zip code " +
+                mZipCode + " ######");
         Intent intent = new Intent();
         intent.setAction(action);
         intent.putExtra(MESSAGE, message);

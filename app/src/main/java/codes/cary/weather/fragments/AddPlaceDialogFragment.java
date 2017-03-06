@@ -48,8 +48,6 @@ public class AddPlaceDialogFragment extends DialogFragment {
                         if (!TextUtils.isEmpty(mZipCodeTextView.getText().toString())) {
                             mClickCallbacks.onClickAdd(new Place(mZipCodeTextView.getText().toString()));
                         }
-
-                        //mClickCallbacks.onClickAdd();
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {

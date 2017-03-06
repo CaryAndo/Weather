@@ -3,7 +3,7 @@ package codes.cary.weather.callbacks;
 import android.content.Intent;
 
 /**
- * Created by cary on 3/4/17.
+ * Callbacks for when the {@link codes.cary.weather.service.WeatherApiService} has finished fetching
  */
 
 public interface ApiCallbacks {

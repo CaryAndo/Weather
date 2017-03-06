@@ -9,12 +9,13 @@ import android.text.Html;
 import android.util.Log;
 
 import codes.cary.weather.R;
+import codes.cary.weather.callbacks.ContainerInteractionCallbacks;
 
 /**
- * Created by cary on 3/3/17.
+ * A simple base Activity to extend, does some nice logging for us
  */
 
-public abstract class BaseActivity extends Activity {
+public abstract class BaseActivity extends Activity implements ContainerInteractionCallbacks {
     public abstract String getTag();
     private AlertDialog mAlertDialog;
 
