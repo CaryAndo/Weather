@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="codes.cary.weather.fragments.PlaceDetailFragment">
+
+    <TextView
+        android:id="@+id/detail_place_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder"
+        android:textSize="24sp"
+        android:layout_margin="14dp"
+        />
+
+    <TextView
+        android:id="@+id/detail_coordinates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:text="@string/placeholder"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/detail_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:text="@string/placeholder"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/detail_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:text="@string/placeholder"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/detail_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:text="@string/placeholder"
+        android:textSize="16sp"
+        />
+
+</LinearLayout>
