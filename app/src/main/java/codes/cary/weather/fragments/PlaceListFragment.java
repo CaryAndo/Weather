@@ -154,6 +154,7 @@ public class PlaceListFragment extends BaseFragment implements
             LocalBroadcastManager.getInstance(getActivity()).unregisterReceiver(mReceiver);
         }
 
+        // Cache our current list of results
         String fileName = getActivity().getResources().getString(R.string.list_file_name);
         StorageUtils.writeSerializableToFile(getActivity(), fileName, (Serializable) mItems);
     }
@@ -229,6 +230,10 @@ public class PlaceListFragment extends BaseFragment implements
         updateAllWeather();
     }
 
+    /**
+     * Update the weather for all the items in the list.
+     * An item is skipped if it was updated less than a half hour ago
+     */
     private void updateAllWeather() {
         for (Place place : mItems) {
             long rightNow = System.currentTimeMillis();
@@ -264,6 +269,7 @@ public class PlaceListFragment extends BaseFragment implements
             mAdapter.notifyItemChanged(index);
         } else {
             // This shouldn't happen
+            Log.e(getTag(), "Service somehow forgot to send the zip code back");
         }
     }
 
